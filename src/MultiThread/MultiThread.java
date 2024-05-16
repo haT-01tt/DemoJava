@@ -82,7 +82,7 @@ public class MultiThread {
     public static List<Student> getStudent() {
         List<Student> students = new ArrayList<>();
         try {
-            Connection con = connect.getConnectDb(DRIVER, URL, USERNAME, PASSWORD);
+            Connection con = connect.getConnectDb();
             Statement statement = con.createStatement();
             ResultSet rs = statement.executeQuery(QUERY);
             while (rs.next()) {
